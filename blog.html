@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog | Dubai Cash Stuffer</title>
+  <meta name="description" content="Cash stuffing and budgeting tips.">
+  <!-- Set the saved theme before first paint to avoid a light flash in dark mode. -->
+  <script>
+    try {
+      var t = localStorage.getItem("dcs-theme");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <!-- Fonts: Fraunces (display, soft and cinematic), DM Sans (body). Swap freely. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500..800;1,9..144,500..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/app.js" defer></script>
+  <script src="js/site-layout.js" async defer></script>
+</head>
+<body>
+  
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <dcs-header></dcs-header>
+
+  <main id="main">
+
+    <!-- ===== PAGE HEAD ===== -->
+    <section class="page-head container">
+      <p class="eyebrow">The blog</p>
+      <h1>Notes from the envelope</h1>
+      <p>Written guides to go with the videos: setups, scripts and the mistakes I made so you don't have to.</p>
+    </section>
+
+    <!-- ===== CATEGORY FILTER ===== -->
+    <section class="container" aria-label="Filter posts">
+      <div class="pill-row" data-filter-group role="group" aria-label="Post categories">
+        <button class="pill" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="pill" type="button" data-filter="setup" aria-pressed="false">Setup</button>
+        <button class="pill" type="button" data-filter="groceries" aria-pressed="false">Groceries</button>
+        <button class="pill" type="button" data-filter="savings" aria-pressed="false">Savings</button>
+        <button class="pill" type="button" data-filter="mindset" aria-pressed="false">Mindset</button>
+      </div>
+    </section>
+
+    <!-- ===== POST GRID ===== -->
+    <section class="section section--tight container" aria-label="Posts">
+      <div class="grid grid--posts">
+        <article class="reveal">
+          <a class="card" href="blog.html">
+            <div class="thumb thumb--alt-1" aria-hidden="true"></div>
+            <div class="card__body">
+              <span class="tag">Setup</span>
+              <h3 class="card__title">Your first cash stuffing envelope system</h3>
+              <p class="card__meta">6 min read · 26 Oct 2026</p>
+            </div>
+          </a>
+        </article>
+        <article class="reveal">
+          <a class="card" href="blog.html">
+            <div class="thumb thumb--alt-2" aria-hidden="true"></div>
+            <div class="card__body">
+              <span class="tag">Groceries</span>
+              <h3 class="card__title">How to budget a Carrefour run in dirhams</h3>
+              <p class="card__meta">5 min read · 19 Oct 2026</p>
+            </div>
+          </a>
+        </article>
+        <article class="reveal">
+          <a class="card" href="blog.html">
+            <div class="thumb thumb--alt-3" aria-hidden="true"></div>
+            <div class="card__body">
+              <span class="tag">Savings</span>
+              <h3 class="card__title">Sinking funds for Dubai's yearly bills</h3>
+              <p class="card__meta">7 min read · 12 Oct 2026</p>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <!-- Pagination placeholder. Add prev/next links here when you have more posts. -->
+      <nav class="btn-row" aria-label="Pagination" style="margin-top: var(--space-7);">
+        <a class="btn btn--ghost" href="#" aria-disabled="true">Newer posts</a>
+        <a class="btn btn--ghost" href="#">Older posts</a>
+      </nav>
+    </section>
+
+    <!-- ===== SUBSCRIBE CTA ===== -->
+    <section class="section section--tight container" aria-labelledby="blog-cta">
+      <div class="cta-banner reveal">
+        <div>
+          <h2 id="blog-cta">Get new posts in your inbox</h2>
+          <p>Every new guide and printable, once a week.</p>
+        </div>
+        <a class="btn btn--primary" href="index.html#subscribe">Subscribe</a>
+      </div>
+    </section>
+
+  </main>
+
+  <dcs-footer></dcs-footer>
+  
+</body>
+</html>
