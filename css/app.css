@@ -1,3 +1,6 @@
+/* --------------------------------------------------------------------------
+   1. DESIGN
+   -------------------------------------------------------------------------- */
 :root {
   --font-display: "Fraunces", "Georgia", serif;     /* headings, big numbers */
   --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -53,6 +56,10 @@
   --shadow-soft: 0 18px 40px -20px rgb(0 0 0 / 0.35);
 }
 
+
+/* --------------------------------------------------------------------------
+   2. THEME
+   -------------------------------------------------------------------------- */
 :root {
   --c-maroon: #5c1a08;
   --c-ember: #c2410c;     /* deeper rust: text-safe on light surfaces */
@@ -263,7 +270,7 @@ button, input, select, textarea {
 
 
 /* --------------------------------------------------------------------------
-   5. LAYOUT PRIMITIVES
+   5. LAYOUT
    -------------------------------------------------------------------------- */
 .container {
   width: var(--container);
@@ -423,7 +430,7 @@ html.js .site-nav[data-open="true"] {
   justify-content: center;
   gap: var(--space-2);
   min-height: 48px;
-  padding: var(--space-3) var(--space-5);
+  padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-pill);
   border: 1px solid transparent;
   font-weight: 700;
@@ -433,6 +440,9 @@ html.js .site-nav[data-open="true"] {
     transform var(--dur-fast) var(--ease-out),
     background var(--dur-fast) var(--ease-out),
     box-shadow var(--dur-fast) var(--ease-out);
+}
+.btn-footer {
+  font-size: var(--text-sm);
 }
 .btn:hover {
   transform: translateY(-2px);
@@ -692,6 +702,194 @@ html.js .site-nav[data-open="true"] {
 
 
 /* --------------------------------------------------------------------------
+   10. VIDEO PAGE
+   -------------------------------------------------------------------------- */
+.video-layout {
+  display: grid;
+  gap: var(--space-6);
+}
+.video-meta h1 {
+  font-size: var(--text-2xl);
+  margin-top: var(--space-4);
+}
+.video-meta__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-4);
+}
+.description {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+.related-title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+}
+.related {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+}
+.related .card {
+  flex-direction: row;
+}
+.related .card .thumb {
+  width: 42%;
+  flex-shrink: 0;
+  aspect-ratio: auto;
+  min-height: 96px;
+}
+.related .card .card__body {
+  padding: var(--space-3) var(--space-4);
+}
+
+
+/* --------------------------------------------------------------------------
+   11. PAGE-BLOCKS (Blog, About, Contact, Services)
+   -------------------------------------------------------------------------- */
+.page-head {
+  padding-block: var(--space-7) var(--space-5);
+}
+.page-head p {
+  font-size: var(--text-lg);
+  color: var(--color-muted);
+}
+
+.post-body {
+  max-width: 68ch;
+}
+.post-body h2 {
+  font-size: var(--text-xl);
+  margin-top: var(--space-6);
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+.pill {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  cursor: pointer;
+  min-height: 40px;
+}
+.pill[aria-pressed="true"] {
+  background: var(--color-brand);
+  color: var(--color-on-brand);
+  border-color: transparent;
+}
+
+.portrait {
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4 / 5;
+  background: var(--grad-brand);
+  box-shadow: var(--shadow-soft);
+}
+
+.stat-row {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(2, 1fr);
+  margin-block: var(--space-6);
+}
+.stat {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+.stat__num {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-brand);
+}
+:root[data-theme="dark"] .stat__num { color: var(--c-gold); }
+.stat__label {
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+  margin: 0;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  background: var(--grad-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+.price-card--featured {
+  background: var(--grad-deep);
+  color: #fff;
+  border: none;
+}
+.price-card--featured p,
+.price-card--featured h3,
+.price-card--featured .price,
+.price-card--featured .list-check li {
+  color: #fff;
+}
+.price-card--featured .list-check li::before {
+  color: var(--c-gold);
+}
+:root[data-theme="dark"] .price-card--featured {
+  background: linear-gradient(135deg, #3a2016, #7a2a0c 60%, #c2410c);
+}
+:root[data-theme="dark"] .price-card--featured .price {
+  color: var(--c-gold);
+}
+.price-card--featured .btn--primary {
+  background: #fff;
+  color: var(--c-maroon);
+}
+:root[data-theme="dark"] .price-card--featured .btn--primary {
+  background: var(--c-gold);
+  color: var(--c-espresso);
+}
+
+.contact-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+@media (min-width: 640px) {
+  .contact-panel { padding: var(--space-7); }
+}
+
+.faq details {
+  border-bottom: 1px solid var(--color-border);
+  padding-block: var(--space-4);
+}
+.faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: var(--text-lg);
+  list-style: none;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+";
+  float: right;
+  color: var(--color-accent);
+}
+.faq details[open] summary::after { content: "−"; }
+
+
+/* --------------------------------------------------------------------------
    12. FOOTER
    -------------------------------------------------------------------------- */
 .cta-banner {
@@ -755,7 +953,10 @@ html.js .site-nav[data-open="true"] {
   padding: 0;
 }
 .footer-grid li {
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+.footer-grid a {
+  text-decoration: none;
 }
 .social-list {
   display: flex;
@@ -790,6 +991,26 @@ html.js .site-nav[data-open="true"] {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: var(--space-2);
+}
+
+
+/* --------------------------------------------------------------------------
+   13. REVEAL ANIMATION
+   -------------------------------------------------------------------------- */
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+html.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.stack > * + * {
+  margin-top: var(--space-4);
 }
 
 
