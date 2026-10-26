@@ -19,38 +19,14 @@
 
   <link rel="stylesheet" href="css/app.css">
   <script src="js/app.js" defer></script>
+  <script src="js/site-layout.js" async defer></script>
 </head>
 <body>
   
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ===== HEADER / NAV ===== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Dubai Cash Stuffer, home">
-        <img class="logo--light" src="assets/logo-light.png" alt="" width="200" height="60">
-        <img class="logo--dark" src="assets/logo-dark.png" alt="" width="200" height="60">
-      </a>
-
-      <nav id="site-nav" class="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="video.html">Videos</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
-          <span aria-hidden="true">◐</span> <span data-theme-label>Dark</span>
-        </button>
-        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
-      </div>
-    </div>
-  </header>
+  <dcs-header></dcs-header>
 
   <main>
     <!-- ===== HERO: video-first intro ===== -->
@@ -142,53 +118,7 @@
   </main>
 
   <!-- ===== FOOTER: social links + newsletter ===== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h2>Newsletter</h2>
-          <p class="muted">Budget tips, free printables and new video alerts.</p>
-          <form class="newsletter-form" data-form action="#" novalidate>
-            <div class="field">
-              <label for="footer-email" class="sr-only">Email address</label>
-              <input id="footer-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required aria-describedby="footer-email-error">
-              <p class="field__error" id="footer-email-error" aria-live="polite"></p>
-            </div>
-            <div>
-              <button class="btn btn-footer btn--primary" type="submit">Sign up</button>
-            </div>
-          </form>
-          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-        </div>
-
-        <!-- <nav aria-label="Footer">
-          <h2>Explore</h2>
-          <ul>
-            <li><a href="video.html">Videos</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav> -->
-
-        <div>
-          <h2>Follow</h2>
-          <ul class="social-list">
-            <!-- Replace href values with your real profiles -->
-            <li><a href="https://www.youtube.com/" rel="noopener" aria-label="YouTube">YouTube</a></li>
-            <li><a href="https://www.instagram.com/" rel="noopener" aria-label="Instagram">Instagram</a></li>
-            <li><a href="https://www.tiktok.com/" rel="noopener" aria-label="TikTok">TikTok</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="footer-base">
-        <span>© <span data-year>2026</span> Dubai Cash Stuffer. All rights reserved.</span>
-        <span><a href="contact.html">Privacy</a> · <a href="contact.html">Terms</a></span>
-      </p>
-    </div>
-  </footer>
+  <dcs-footer></dcs-footer>
 
 </body>
 </html>
