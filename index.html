@@ -53,26 +53,140 @@
   </header>
 
   <main>
-    <section>
-      <div>
-        <p></p>
-        <h1></h1>
-        <p></p>
+    <!-- ===== HERO: video-first intro ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
         <div>
-          <a href=""></a>
-          <a href=""></a>
+          <p class="eyebrow">Weekly budgeting videos</p>
+          <h1 id="hero-title">Stuff the cash. <em>Stretch the dirham.</em></h1>
+          <p class="hero__lede">Cash stuffing and sinking funds.</p>
+          <div class="btn-row">
+            <a class="btn btn--gradient" href="video.html">Watch the latest</a>
+            <a class="btn btn--ghost" href="#subscribe">Subscribe</a>
+          </div>
+        </div>
+
+        <!-- Hero video. Replace the .thumb block with an embed when you have a video:
+             <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="..." loading="lazy" allowfullscreen></iframe> -->
+        <div class="video-frame">
+          <div class="thumb" role="img" aria-label="Placeholder for the featured video"></div>
         </div>
       </div>
     </section>
 
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
+    <!-- ===== LATEST UPLOADS: grid of video cards ===== -->
+    <section class="section section--tight" aria-labelledby="latest-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <div>
+            <h2 id="latest-title">Latest uploads</h2>
+            <p class="muted">Fresh budget resets, hauls and money check-ins.</p>
+          </div>
+          <a class="btn btn--ghost" href="video.html">All videos</a>
+        </div>
+
+        <div class="grid grid--videos">
+          <a class="card reveal" href="video.html">
+            <div class="thumb thumb--alt-1" aria-hidden="true"></div>
+            <div class="card__body">
+              <span class="tag">Budget reset</span>
+              <h3 class="card__title">Monthly cash stuffing setup for beginners</h3>
+              <p class="card__meta">14 min · 3 days ago</p>
+            </div>
+          </a>
+          <a class="card reveal" href="video.html">
+            <div class="thumb thumb--alt-2" aria-hidden="true"></div>
+            <div class="card__body">
+              <span class="tag">Grocery</span>
+              <h3 class="card__title">Grocery run on a 600 AED envelope</h3>
+              <p class="card__meta">11 min · 1 week ago</p>
+            </div>
+          </a>
+          <a class="card reveal" href="video.html">
+            <div class="thumb thumb--alt-3" aria-hidden="true"></div>
+            <div class="card__body">
+              <span class="tag">Sinking funds</span>
+              <h3 class="card__title">Save for Eid without the panic</h3>
+              <p class="card__meta">9 min · 2 weeks ago</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT TEASER ===== -->
+    <section class="section" aria-labelledby="about-teaser-title">
+      <div class="container split">
+        <div class="portrait reveal" role="img" aria-label="Placeholder for host portrait"></div>
+        <div class="reveal">
+          <p class="eyebrow">Hi, I'm the stuffer</p>
+          <h2 id="about-teaser-title">I budget in cash, so you can too.</h2>
+          <p>Dubai Cash Stuffer started with one envelope and a lot of takeaway receipts. Now it's a place to learn the system, get the printables, and hire a hand if you want one.</p>
+          <a class="btn btn--primary" href="about.html">More about me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SUBSCRIBE CTA ===== -->
+    <section class="section section--tight" id="subscribe" aria-labelledby="subscribe-title">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <div>
+            <h2 id="subscribe-title">Get the weekly stuffing plan</h2>
+            <p>One email a week. Envelope templates, grocery budgets and the videos you'll want to watch twice.</p>
+          </div>
+          <a class="btn btn--primary" href="https://www.youtube.com/" rel="noopener">Subscribe on YouTube</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- ===== FOOTER: social links + newsletter ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>Newsletter</h2>
+          <p class="muted">Budget tips, free printables and new video alerts.</p>
+          <form class="newsletter-form" data-form action="#" novalidate>
+            <div class="field">
+              <label for="footer-email" class="sr-only">Email address</label>
+              <input id="footer-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required aria-describedby="footer-email-error">
+              <p class="field__error" id="footer-email-error" aria-live="polite"></p>
+            </div>
+            <button class="btn btn--primary" type="submit">Sign up</button>
+          </form>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="video.html">Videos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2>Follow</h2>
+          <ul class="social-list">
+            <!-- Replace href values with your real profiles -->
+            <li><a href="https://www.youtube.com/" rel="noopener" aria-label="YouTube">YouTube</a></li>
+            <li><a href="https://www.instagram.com/" rel="noopener" aria-label="Instagram">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/" rel="noopener" aria-label="TikTok">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer-base">
+        <span>© <span data-year>2026</span> Dubai Cash Stuffer. All rights reserved.</span>
+        <span><a href="contact.html">Privacy</a> · <a href="contact.html">Terms</a></span>
+      </p>
+    </div>
+  </footer>
 
 </body>
 </html>
