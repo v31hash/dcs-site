@@ -9,7 +9,7 @@
 
     /* ------------------------------------------------------------------------
      THEME TOGGLE
-     - Default: follows the operating system (prefers-color-scheme).
+     - default: follows the operating system (prefers-color-scheme).
      - every access is wrapped in try/catch.
      ------------------------------------------------------------------------ */
   const THEME_KEY = "dcs-theme";
@@ -94,5 +94,12 @@
     revealEls.forEach((el) => observer.observe(el));
   }
 
+  /* ------------------------------------------------------------------------
+     MISC
+     - footer year stays current without editing HTML.
+     ------------------------------------------------------------------------ */
+  document.querySelectorAll("[data-year]").forEach((el) => {
+    el.textContent = new Date().getFullYear();
+  });
 
 })();
