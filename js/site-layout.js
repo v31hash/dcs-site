@@ -12,12 +12,14 @@ class dcsHeader extends HTMLElement {
         </a>
 
         <nav id="site-nav" class="site-nav" aria-label="Main">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="video.html">Videos</a>
-          <a href="blog.html">Blog</a>
-          <a href="services.html">Services</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="video.html">Videos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </nav>
 
         <div class="header-actions">
@@ -162,11 +164,13 @@ class dcsFooter extends HTMLElement {
 
           <!-- <nav aria-label="Footer">
             <h2>Explore</h2>
-            <a href="video.html">Videos</a>
-            <a href="blog.html">Blog</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <ul>
+              <li><a href="video.html">Videos</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
           </nav> -->
 
           <div>
