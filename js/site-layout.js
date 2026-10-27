@@ -13,7 +13,7 @@ class dcsHeader extends HTMLElement {
 
         <nav id="site-nav" class="site-nav" aria-label="Main">
           <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="video.html">Videos</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="services.html">Services</a></li>
@@ -32,16 +32,33 @@ class dcsHeader extends HTMLElement {
     </header>`
 
     /* ------------------------------------------------------------------------
-      hide the mobile nav
+      HIDE MOBILE VIEW
       ------------------------------------------------------------------------ */
     const root = document.documentElement;
     root.classList.add("js");
 
     /* ------------------------------------------------------------------------
-    THEME TOGGLE
-    - default: follows the operating system (prefers-color-scheme).
-    - every access is wrapped in try/catch.
-    ------------------------------------------------------------------------ */
+      CURRENT PAGE
+      ------------------------------------------------------------------------ */
+    const currentPage = (() => {
+      const file = window.location.pathname.split("/").pop();
+      return file === "" ? "index.html" : file;
+    })();
+
+    this.querySelectorAll("#site-nav a").forEach((link) => {
+      const target = link.getAttribute("href");
+      if (target === currentPage) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+
+    /* ------------------------------------------------------------------------
+      THEME TOGGLE
+      - default: follows the operating system (prefers-color-scheme).
+      - every access is wrapped in try/catch.
+      ------------------------------------------------------------------------ */
     const THEME_KEY = "dcs-theme";
     const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
     const themeButtons = document.querySelectorAll("[data-theme-toggle]");
@@ -192,8 +209,8 @@ class dcsFooter extends HTMLElement {
     </footer>`
 
     /* ------------------------------------------------------------------------
-    FORMS
-    ------------------------------------------------------------------------ */
+      FORMS
+      ------------------------------------------------------------------------ */
     const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
     function setFieldError(input, message) {
