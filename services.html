@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services | Dubai Cash Stuffer</title>
+  <meta name="description" content="Budget setup, done-with-you coaching and printable kits from Dubai Cash Stuffer.">
+  <!-- Set the saved theme before first paint to avoid a light flash in dark mode. -->
+  <script>
+    try {
+      var t = localStorage.getItem("dcs-theme");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <!-- Fonts: Fraunces (display, soft and cinematic), DM Sans (body). Swap freely. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500..800;1,9..144,500..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/app.js" defer></script>
+  <script src="js/site-layout.js" async defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER -->
+  <dcs-header></dcs-header>
+
+  <main id="main">
+
+    <!-- PAGE HEAD -->
+    <section class="page-head container">
+      <div>
+        <p class="eyebrow">Services</p>
+        <h1>Let's build your envelope system</h1>
+        <p>Pick the level of help that fits. Everything is set up around your income, your bills and the way you actually spend.</p>
+      </div>
+    </section>
+
+    <!-- PRICING CARDS -->
+    <section class="section section--tight container" aria-labelledby="pricing-title">
+      <h2 id="pricing-title" class="sr-only">Pricing</h2>
+      <div class="grid grid--services">
+
+        <article class="price-card reveal">
+          <h3>Printable kit</h3>
+          <p class="price">Free</p>
+          <p class="muted">Envelope labels, a monthly tracker and a starter guide.</p>
+          <ul class="list-check">
+            <li>Envelope labels (PDF)</li>
+            <li>Monthly tracker</li>
+            <li>Starter video guide</li>
+          </ul>
+          <a class="btn btn--ghost" href="index.html#subscribe">Get the kit</a>
+        </article>
+
+        <article class="price-card price-card--featured reveal">
+          <h3>Setup session</h3>
+          <p class="price">AED 350</p>
+          <p>A one-hour video call. We map your income and bills, then build your envelopes together.</p>
+          <ul class="list-check">
+            <li>Custom envelope plan</li>
+            <li>Recorded walkthrough</li>
+            <li>Follow-up message after 30 days</li>
+          </ul>
+          <a class="btn btn--primary" href="contact.html">Book a session</a>
+        </article>
+
+        <article class="price-card reveal">
+          <h3>Done-with-you</h3>
+          <p class="price">AED 1,200</p>
+          <p class="muted">Three months of monthly check-ins and tweaks.</p>
+          <ul class="list-check">
+            <li>Three monthly reviews</li>
+            <li>Shared tracker set-up</li>
+            <li>Chat support between sessions</li>
+          </ul>
+          <a class="btn btn--ghost" href="contact.html">Enquire</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section container" aria-labelledby="faq-title">
+      <div class="section__head reveal">
+        <h2 id="faq-title">Questions</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>Do I need a bank app or a spreadsheet?</summary>
+          <p>No. Cash envelopes work on paper. A tracker is optional and I provide one in the printable kit.</p>
+        </details>
+        <details>
+          <summary>Is this only for people who earn in AED?</summary>
+          <p>The method works for any currency, but the examples are built around dirham bills and everyday Dubai spending.</p>
+        </details>
+        <details>
+          <summary>Can I get a refund on a session?</summary>
+          <p>Yes, within 48 hours of booking if you haven't had the call. Write to us from the contact page.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="section section--tight container" aria-labelledby="svc-cta">
+      <div class="cta-banner reveal">
+        <div>
+          <h2 id="svc-cta">Not ready to book?</h2>
+          <p>Start with the free weekly videos and the printable kit.</p>
+        </div>
+        <a class="btn btn--primary" href="index.html#subscribe">Subscribe free</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <dcs-footer></dcs-footer>
+
+</body>
+</html>

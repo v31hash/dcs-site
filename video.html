@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video | Dubai Cash Stuffer</title>
+  <meta name="description" content="Watch the latest cash stuffing and budgeting video.">
+  <!-- Set the saved theme before first paint to avoid a light flash in dark mode. -->
+  <script>
+    try {
+      var t = localStorage.getItem("dcs-theme");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <!-- Fonts: Fraunces (display, soft and cinematic), DM Sans (body). Swap freely. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500..800;1,9..144,500..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/app.js" defer></script>
+  <script src="js/site-layout.js" async defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER -->
+  <dcs-header></dcs-header>
+
+  <main id="main">
+    <section class="section section--tight">
+      <div class="container video-layout">
+
+        <!-- MAIN COLUMN: player, title, description -->
+        <div>
+          <!-- PLAYER: swap the placeholder for an embed when a video is ready -->
+          <div class="video-frame">
+            <!-- <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="Video title" loading="lazy" allowfullscreen></iframe> -->
+            <div class="thumb" role="img" aria-label="Placeholder for the video player"></div>
+          </div>
+
+          <!-- title & meta -->
+          <div class="video-meta">
+            <span class="tag">Budget reset</span>
+            <h1>Monthly cash stuffing setup for beginners</h1>
+            <p class="video-meta__stats">
+              <span>14 min</span>
+              <span aria-hidden="true">·</span>
+              <span>Posted 3 days ago</span>
+              <span aria-hidden="true">·</span>
+              <span>Dubai · AED</span>
+            </p>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="services.html">Get the printable kit</a>
+              <a class="btn btn--ghost" href="#subscribe">Subscribe</a>
+            </div>
+          </div>
+
+          <!-- description -->
+          <div class="description reveal">
+            <h2>About this video</h2>
+            <p>In this video I walk through setting up envelopes for rent, groceries, transport and fun money, and how to refill them each month without the scramble.</p>
+            <h3>Timestamps</h3>
+            <ul>
+              <li>0:00 Intro</li>
+              <li>1:30 Choosing your envelopes</li>
+              <li>6:10 Setting amounts from your payslip</li>
+              <li>11:20 Monthly refill routine</li>
+            </ul>
+            <h3>Links</h3>
+            <p><a href="services.html">Printable envelope templates</a></p>
+          </div>
+
+          <!-- comments -->
+        </div>
+
+        <!-- SIDEBAR: related videos -->
+        <aside aria-labelledby="related-title">
+          <h2 id="related-title" class="related-title">Related videos</h2>
+          <div class="related">
+            <a class="card reveal" href="video.html">
+              <div class="thumb thumb--alt-2" aria-hidden="true"></div>
+              <div class="card__body">
+                <h3 class="card__title">Grocery run on a 600 AED envelope</h3>
+                <p class="card__meta">11 min</p>
+              </div>
+            </a>
+            <a class="card reveal" href="video.html">
+              <div class="thumb thumb--alt-3" aria-hidden="true"></div>
+              <div class="card__body">
+                <h3 class="card__title">Save for Eid without the panic</h3>
+                <p class="card__meta">9 min</p>
+              </div>
+            </a>
+            <a class="card reveal" href="video.html">
+              <div class="thumb thumb--alt-1" aria-hidden="true"></div>
+              <div class="card__body">
+                <h3 class="card__title">Cash stuffing with a freelance income</h3>
+                <p class="card__meta">16 min</p>
+              </div>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="section section--tight" id="subscribe" aria-labelledby="sub-title">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <div>
+            <h2 id="sub-title">Enjoying the stuffing?</h2>
+            <p>Subscribe for a new budget video every week.</p>
+          </div>
+          <a class="btn btn--primary" href="https://www.youtube.com/" rel="noopener">Subscribe</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <dcs-footer></dcs-footer>
+
+</body>
+</html>

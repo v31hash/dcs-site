@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Dubai Cash Stuffer</title>
+  <meta name="description" content="Get in touch about sessions, collaborations or video questions.">
+  <!-- Set the saved theme before first paint to avoid a light flash in dark mode. -->
+  <script>
+    try {
+      var t = localStorage.getItem("dcs-theme");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <!-- Fonts: Fraunces (display, soft and cinematic), DM Sans (body). Swap freely. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500..800;1,9..144,500..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/app.js" defer></script>
+  <script src="js/site-layout.js" async defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER -->
+  <dcs-header></dcs-header>
+
+  <main id="main">
+
+    <!-- PAGE HEAD -->
+    <section class="page-head container">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h1>Say hello</h1>
+        <p>Questions about a session, a collaboration or a video? Send a message and I'll reply within two working days.</p>
+      </div>
+    </section>
+
+    <!-- FORM & DETAILS -->
+    <section class="section section--tight container" aria-label="Contact form and details">
+      <div>
+
+        <!-- Contact form -->
+        <div class="contact-panel reveal">
+          <h2>Send a message</h2>
+          <form data-form action="#" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="c-name">Name</label>
+                <input id="c-name" name="name" type="text" autocomplete="name" required aria-describedby="c-name-error">
+                <p class="field__error" id="c-name-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="c-email">Email</label>
+                <input id="c-email" name="email" type="email" autocomplete="email" required aria-describedby="c-email-error">
+                <p class="field__error" id="c-email-error" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="c-topic">What's it about?</label>
+              <select id="c-topic" name="topic">
+                <option>General question</option>
+                <option>Book a setup session</option>
+                <option>Collaboration or sponsorship</option>
+                <option>Video feedback</option>
+              </select>
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="message" required aria-describedby="c-message-error"></textarea>
+              <p class="field__error" id="c-message-error" aria-live="polite"></p>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+      </div>
+      <div>
+        <!-- Contact details -->
+        <div class="reveal">
+          <h2>Other ways to reach me</h2>
+          <p><strong>Email</strong><br><a href="mailto:hello@example.com">hello@example.com</a></p>
+          <p><strong>Based in</strong><br>Dubai, UAE</p>
+          <p><strong>Response time</strong><br>Within two working days</p>
+          <p><strong>Social</strong><br>
+            <a href="https://www.youtube.com/" rel="noopener">YouTube</a> ·
+            <a href="https://www.instagram.com/" rel="noopener">Instagram</a> ·
+            <a href="https://www.tiktok.com/" rel="noopener">TikTok</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE CTA -->
+    <section class="section section--tight container" aria-labelledby="contact-cta">
+      <div class="cta-banner reveal">
+        <div>
+          <h2 id="contact-cta">While you wait, stuff along</h2>
+          <p>New videos every week, and free printables for subscribers.</p>
+        </div>
+        <a class="btn btn--primary" href="index.html#subscribe">Subscribe</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <dcs-footer></dcs-footer>
+
+</body>
+</html>

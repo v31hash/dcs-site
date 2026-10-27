@@ -25,19 +25,21 @@
   
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ===== HEADER / NAV ===== -->
+  <!-- HEADER-->
   <dcs-header></dcs-header>
 
   <main id="main">
 
-    <!-- ===== PAGE HEAD ===== -->
+    <!-- PAGE HEAD -->
     <section class="page-head container">
-      <p class="eyebrow">The blog</p>
-      <h1>Notes from the envelope</h1>
-      <p>Written guides to go with the videos: setups, scripts and the mistakes I made so you don't have to.</p>
+      <div>
+        <p class="eyebrow">The blog</p>
+        <h1>Notes from the envelope</h1>
+        <p>Written guides to go with the videos: setups, scripts and the mistakes I made so you don't have to.</p>
+      </div>
     </section>
 
-    <!-- ===== CATEGORY FILTER ===== -->
+    <!-- CATEGORY FILTER -->
     <section class="container" aria-label="Filter posts">
       <div class="pill-row" data-filter-group role="group" aria-label="Post categories">
         <button class="pill" type="button" data-filter="all" aria-pressed="true">All</button>
@@ -84,13 +86,15 @@
       </div>
 
       <!-- Pagination placeholder. Add prev/next links here when you have more posts. -->
-      <nav class="btn-row" aria-label="Pagination" style="margin-top: var(--space-7);">
-        <a class="btn btn--ghost" href="#" aria-disabled="true">Newer posts</a>
-        <a class="btn btn--ghost" href="#">Older posts</a>
-      </nav>
+      <div>
+        <nav class="btn-row" aria-label="Pagination" style="margin-top: var(--space-7);">
+          <a class="btn btn--ghost" href="#" aria-disabled="true">Newer posts</a>
+          <a class="btn btn--ghost" href="#">Older posts</a>
+        </nav>
+      </div>
     </section>
 
-    <!-- ===== SUBSCRIBE CTA ===== -->
+    <!-- SUBSCRIBE CTA -->
     <section class="section section--tight container" aria-labelledby="blog-cta">
       <div class="cta-banner reveal">
         <div>
@@ -104,6 +108,6 @@
   </main>
 
   <dcs-footer></dcs-footer>
-  
+
 </body>
 </html>
