@@ -170,10 +170,10 @@ h1, h2, h3, h4 {
   font-weight: 700;
 }
 
-h1 { font-size: var(--text-3xl); }
-h2 { font-size: var(--text-2xl); }
-h3 { font-size: var(--text-xl); }
-h4 { font-size: var(--text-lg); }
+h1 { font-size: var(--text-2xl); }
+h2 { font-size: var(--text-xl); }
+h3 { font-size: var(--text-md); }
+h4 { font-size: var(--text-sm); }
 
 p {
   margin: 0 0 var(--space-4);
@@ -671,7 +671,7 @@ html.js .site-nav[data-open="true"] {
 /* service cards */
 .price {
   font-family: var(--font-display);
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   font-weight: 700;
   margin: 0;
   color: var(--color-brand);
@@ -756,7 +756,7 @@ html.js .site-nav[data-open="true"] {
   padding-block: var(--space-7) var(--space-5);
 }
 .page-head p {
-  font-size: var(--text-lg);
+  font-size: var(--text-sm);
   color: var(--color-muted);
 }
 
@@ -1038,7 +1038,7 @@ html.js .reveal.is-visible {
   }
   .split {
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: top;
   }
   .newsletter-form {
     grid-template-columns: 1fr auto;
