@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/venture3/env.venture31.com/
+    - /bin/cp -R index.html about.html services.html video.html blog.html contact.html css js assets $DEPLOYPATH
