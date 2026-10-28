@@ -1,0 +1,37 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-cpanel
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up SSH key
+        env:
+          SSH_KEY: ${{ secrets.CPANEL_SSH_KEY }}
+          SSH_HOST: ${{ secrets.CPANEL_HOST }}
+          SSH_PORT: ${{ secrets.CPANEL_SSH_PORT }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts
+
+      - name: Pull latest code and run .cpanel.yml deploy
+        env:
+          SSH_HOST: ${{ secrets.CPANEL_HOST }}
+          SSH_PORT: ${{ secrets.CPANEL_SSH_PORT }}
+          SSH_USER: ${{ secrets.CPANEL_USER }}
+        run: |
+          REPO=/home/venture3/repositories/dcs-site
+          OUTPUT=$(ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "cd $REPO && git pull --ff-only origin main && uapi --output=json VersionControlDeployment create repository_root=$REPO")
+          echo "$OUTPUT"
+          echo "$OUTPUT" | grep -q '"status":1' || { echo "cPanel deployment failed"; exit 1; }
